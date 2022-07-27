@@ -30,6 +30,13 @@
       <artifactId>hazelcast</artifactId>
       <version>5.1.2</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.hazelcast.jet</groupId>
+      <artifactId>hazelcast-jet-kafka</artifactId>
+      <version>5.1.2</version>
+    </dependency>
+
   </dependencies>
 
   <build>
