@@ -1,4 +1,4 @@
-package org.example;
+package org.example.kafka;
 
 import com.hazelcast.client.HazelcastClient;
 import com.hazelcast.client.config.ClientConfig;

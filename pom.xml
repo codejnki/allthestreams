@@ -6,7 +6,12 @@
 
   <groupId>org.example</groupId>
   <artifactId>hz1</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>cdc-example</module>
+    <module>cdc-example-integration-tests</module>
+  </modules>
 
   <name>hz1</name>
   <!-- FIXME change it to the project's website -->
@@ -37,6 +42,17 @@
       <version>5.1.2</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.hazelcast.jet</groupId>
+      <artifactId>hazelcast-jet-cdc-debezium</artifactId>
+      <version>5.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.hazelcast.jet</groupId>
+      <artifactId>hazelcast-jet-cdc-postgres</artifactId>
+      <version>5.1.2</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -88,8 +104,8 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>10</source>
-          <target>10</target>
+          <source>11</source>
+          <target>11</target>
         </configuration>
       </plugin>
     </plugins>
