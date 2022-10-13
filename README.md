@@ -6,6 +6,12 @@ A little demo app I threw together to test out some Hazelcast processing.
 
 `docker-compose up` will start a stack that contains `zookeeper`, `kafka`, and `hazelcast`.
 
+If this is the first time starting the Kafka broker, create the demo topic
+```shell
+docker-compose exec broker kafka-topics --create --bootstrap-server \
+    localhost:9092 --replication-factor 1 --partitions 1 --topic demo-topic
+```
+
 Run the java app to submit the pipeline to the Hazelcast instance.
 
 In another window run

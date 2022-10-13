@@ -33,3 +33,13 @@ services:
       - "5701:5701"
     environment:
       HZ_CLUSTERNAME: hello-world
+
+  db:
+    image: debezium/example-postgres:1.2
+    container_name: db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
